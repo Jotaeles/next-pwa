@@ -2,15 +2,12 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
+import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+
+import { LogoRadarIcon } from "../icons/logo-radar-icon";
 
 export const Navbar = () => {
   const [auth, setAuth] = React.useState(true);
@@ -25,21 +22,10 @@ export const Navbar = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ backgroundColor: "#5233EA" }} position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Skydropx
-          </Typography>
+    <Box>
+      <AppBar sx={{ backgroundColor: "#FFFFFF" }} position="static">
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <LogoRadarIcon sx={{ width: "120px", height: "auto" }} />
           {auth && (
             <div>
               <IconButton
@@ -50,7 +36,16 @@ export const Navbar = () => {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                <Avatar
+                  sx={{
+                    fontSize: "14px",
+                    bgcolor: "#7b85a1",
+                    height: "30px",
+                    width: "30px",
+                  }}
+                >
+                  JL
+                </Avatar>
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -67,8 +62,8 @@ export const Navbar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                <MenuItem onClick={handleClose}>Cerrar sesión</MenuItem>
               </Menu>
             </div>
           )}

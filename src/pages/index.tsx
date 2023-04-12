@@ -1,7 +1,9 @@
 import Head from "next/head";
-import { Button, Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 import { Navbar } from "../components/navbar";
+import BasicTable from "@/components/basic-table/basic-table";
+import { SimpleAccordion } from "@/components/accordion";
 
 export default function Home() {
   return (
@@ -15,31 +17,11 @@ export default function Home() {
       <main>
         <Navbar />
         <Box p={2}>
-          <Typography
-            component="h1"
-            sx={{
-              fontSize: "20px",
-              fontWeight: 600,
-              color: "rgb(79, 92, 129)",
-            }}
-          >
-            Prueba pwa
-          </Typography>
+          <BasicTable />
           <br />
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#5233EA",
-              "&:hover": { backgroundColor: "#5233EA" },
-            }}
-            onClick={() =>
-              window.open(
-                "https://api.whatsapp.com/send?text=Revisa%20el%20rastreo%20de%20tus%20guías%20en%20el%20siguiente%20ink%20https://next-pwa-pearl.vercel.app/"
-              )
-            }
-          >
-            Compartir en WhatsApp
-          </Button>
+          <hr />
+          <br />
+          <SimpleAccordion />
         </Box>
       </main>
     </>
