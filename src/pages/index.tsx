@@ -18,10 +18,10 @@ export default function Home() {
         <Navbar />
         <Box p={2}>
           <BasicTable />
-          <br />
+          {/* <br />
           <hr />
           <br />
-          <SimpleAccordion />
+          <SimpleAccordion /> */}
         </Box>
       </main>
     </>
