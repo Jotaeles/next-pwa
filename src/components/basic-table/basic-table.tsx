@@ -177,13 +177,13 @@ const BasicTable: FC = () => {
                   <Button
                     variant="contained"
                     sx={{
-                      backgroundColor: "#5233EA",
-                      "&:hover": { backgroundColor: "#5233EA" },
+                      backgroundColor: "#25D366",
+                      "&:hover": { backgroundColor: "#25D366" },
                       ".MuiSvgIcon-root": { marginRight: "0px" },
                     }}
                     onClick={() =>
                       window.open(
-                        `https://api.whatsapp.com/send?text=Revisa%20el%20rastreo%20de%20tus%20guía%20en%20el%20siguiente%20link%20https://rastreo.skydropx.com/?tracking_number=${row.tracking_number}`
+                        `https://api.whatsapp.com/send?phone=8110066718&text=Revisa%20el%20rastreo%20de%20tu%20guía%20en%20el%20siguiente%20link%20https://rastreo.skydropx.com/?tracking_number=${row.tracking_number}`
                       )
                     }
                   >
