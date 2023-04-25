@@ -183,7 +183,7 @@ const BasicTable: FC = () => {
                     }}
                     onClick={() =>
                       window.open(
-                        `https://api.whatsapp.com/send?phone=+528110066718&text=Revisa%20el%20rastreo%20de%20tu%20guía%20en%20el%20siguiente%20link%20https://rastreo.skydropx.com/?tracking_number=${row.tracking_number}`
+                        `https://api.whatsapp.com/send?phone=8180169643&text=Revisa%20el%20rastreo%20de%20tu%20guía%20en%20el%20siguiente%20link%20https://rastreo.skydropx.com/?tracking_number=${row.tracking_number}`
                       )
                     }
                   >
